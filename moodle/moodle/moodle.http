@@ -1,0 +1,6 @@
+@moodle_HostAddress = http://localhost:5142
+
+GET {{moodle_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
