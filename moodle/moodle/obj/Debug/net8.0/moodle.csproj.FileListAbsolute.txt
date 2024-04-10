@@ -1,0 +1,8 @@
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.csproj.AssemblyReference.cache
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.AssemblyInfoInputs.cache
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.AssemblyInfo.cs
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.csproj.CoreCompileInputs.cache
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\psely\Documents\GitHub\Moodle_18\moodle\moodle\obj\Debug\net8.0\moodle.sourcelink.json
