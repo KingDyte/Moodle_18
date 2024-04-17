@@ -7491,11 +7491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Milei Örs\\Downloads\\Moodle_18\\Moodle18\\Moodle18.csproj",
+      "projectUniqueName": "C:\\Users\\Milei Örs\\Documents\\EGYETEM\\4.félév\\A rendszerfejlesztés haladó módszerei\\beadando_1\\Moodle18\\Moodle18\\Moodle18.csproj",
       "projectName": "Moodle18",
-      "projectPath": "C:\\Users\\Milei Örs\\Downloads\\Moodle_18\\Moodle18\\Moodle18.csproj",
+      "projectPath": "C:\\Users\\Milei Örs\\Documents\\EGYETEM\\4.félév\\A rendszerfejlesztés haladó módszerei\\beadando_1\\Moodle18\\Moodle18\\Moodle18.csproj",
       "packagesPath": "C:\\Users\\Milei Örs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Milei Örs\\Downloads\\Moodle_18\\Moodle18\\obj\\",
+      "outputPath": "C:\\Users\\Milei Örs\\Documents\\EGYETEM\\4.félév\\A rendszerfejlesztés haladó módszerei\\beadando_1\\Moodle18\\Moodle18\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Milei Örs\\AppData\\Roaming\\NuGet\\NuGet.Config",

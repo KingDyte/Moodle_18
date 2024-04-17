@@ -12,7 +12,7 @@ namespace Moodle18
         public string name { get; set; }
         public string description { get; set; }
 
-        public EventsModel(int a, int b, string c, string d)
+        public EventsModel(long a, long b, string c, string d)
         {
             this.Id = a;
             this.course_id = b;

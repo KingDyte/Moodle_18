@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wwU33PrzXs4meUfAOfidDuiQG7HMwmbynRlZ0zSyJvIPQqfnlEeJTK/KbAyPS6/q5MfpMGQyEc094W4Zvbvt5g==",
+  "dgSpecHash": "bnGxXX6GbSMolA63cFCTL8kqEh100KpPnK0d0n74cdnICmXQzzibZ90H9LRTRF9Kr02Aq2PfI5SMw7VTKYnjrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Milei Örs\\Downloads\\Moodle_18\\Moodle18\\Moodle18.csproj",
+  "projectFilePath": "C:\\Users\\Milei Örs\\Documents\\EGYETEM\\4.félév\\A rendszerfejlesztés haladó módszerei\\beadando_1\\Moodle18\\Moodle18\\Moodle18.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Milei Örs\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Milei Örs\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
