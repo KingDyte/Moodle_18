@@ -1,0 +1,523 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "Swagger Moodle - OpenAPI 3.0",
+    "description" : "",
+    "termsOfService" : "http://swagger.io/terms/",
+    "contact" : {
+      "email" : "apiteam@swagger.io"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version" : "1.0.11"
+  },
+  "externalDocs" : {
+    "description" : "Find out more about Swagger",
+    "url" : "http://swagger.io"
+  },
+  "servers" : [ {
+    "url" : "https://moodle_18.swagger.io/api/v3"
+  } ],
+  "tags" : [ {
+    "name" : "Course",
+    "description" : "Everything about your courses",
+    "externalDocs" : {
+      "description" : "Find out more",
+      "url" : "http://swagger.io"
+    }
+  }, {
+    "name" : "Events",
+    "description" : "Events",
+    "externalDocs" : {
+      "description" : "everything about events",
+      "url" : "http://swagger.io"
+    }
+  }, {
+    "name" : "user",
+    "description" : "Operations about user"
+  } ],
+  "paths" : {
+    "/course" : {
+      "get" : {
+        "tags" : [ "user" ],
+        "summary" : "listEnrolledStudents",
+        "description" : "listEnrolledStudents",
+        "operationId" : "",
+        "responses" : {
+          "200" : {
+            "description" : "Successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/User"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid input"
+          },
+          "422" : {
+            "description" : "Validation exception"
+          },
+          "default" : {
+            "description" : "Default error sample response"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Course" ],
+        "summary" : "Update an existing course",
+        "description" : "Update an existing course by Id",
+        "operationId" : "updateCourse",
+        "requestBody" : {
+          "description" : "Update an existent course",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            },
+            "application/xml" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            },
+            "application/x-www-form-urlencoded" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Courses"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Courses"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Course not found"
+          },
+          "422" : {
+            "description" : "Validation exception"
+          }
+        },
+        "security" : [ {
+          "moodle_auth" : [ "write:course", "read:course" ]
+        } ]
+      },
+      "post" : {
+        "tags" : [ "Course" ],
+        "summary" : "Add a new course",
+        "description" : "Add a new course",
+        "operationId" : "addcourse",
+        "requestBody" : {
+          "description" : "Create course",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            },
+            "application/xml" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            },
+            "application/x-www-form-urlencoded" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Courses"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Courses"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Courses"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid input"
+          },
+          "422" : {
+            "description" : "Validation exception"
+          }
+        },
+        "security" : [ {
+          "moodle_auth" : [ "write:course", "read:course" ]
+        } ]
+      },
+      "delete" : {
+        "tags" : [ "Course" ],
+        "summary" : "delete course",
+        "description" : "delete course",
+        "operationId" : "4",
+        "responses" : {
+          "default" : {
+            "description" : "Default error sample response"
+          }
+        }
+      }
+    },
+    "/course/findByCode" : {
+      "get" : {
+        "tags" : [ "Course" ],
+        "summary" : "Finds course by code",
+        "description" : "Multiple code values can be provided with comma separated strings",
+        "operationId" : "findCourseByStatus",
+        "parameters" : [ {
+          "name" : "status",
+          "in" : "query",
+          "description" : "Status values that need to be considered for filter",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "default" : "available"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Courses"
+                  },
+                  "x-content-type" : "application/json"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Courses"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid code value"
+          }
+        },
+        "security" : [ {
+          "moodle_auth" : [ "write:course", "read:course" ]
+        } ]
+      }
+    },
+    "/course/findByName" : {
+      "get" : {
+        "tags" : [ "Course" ],
+        "summary" : "Finds course by name",
+        "description" : "one name",
+        "operationId" : "findCourseByName",
+        "parameters" : [ {
+          "name" : "tags",
+          "in" : "query",
+          "description" : "Tags to filter by",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "default" : "Matematika"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Courses"
+                  },
+                  "x-content-type" : "application/json"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Courses"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid tag value"
+          }
+        },
+        "security" : [ {
+          "moodle_auth" : [ "write:course", "read:course" ]
+        } ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Courses" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          },
+          "code" : {
+            "type" : "string",
+            "example" : "DDDDD"
+          },
+          "name" : {
+            "type" : "string",
+            "example" : "Matematika"
+          },
+          "credit" : {
+            "type" : "integer",
+            "format" : "int16"
+          }
+        },
+        "example" : {
+          "code" : "DDDDD",
+          "name" : "Matematika",
+          "id" : 10,
+          "credit" : 0
+        },
+        "xml" : {
+          "name" : "Courses"
+        }
+      },
+      "Events" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 100000
+          },
+          "course_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          },
+          "name" : {
+            "type" : "string",
+            "example" : "name"
+          },
+          "description" : {
+            "type" : "string",
+            "example" : "description"
+          }
+        },
+        "xml" : {
+          "name" : "Events"
+        }
+      },
+      "MyCourses" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          },
+          "user_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          },
+          "course_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          }
+        },
+        "xml" : {
+          "name" : "MYCourses"
+        }
+      },
+      "Approved_degrees" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 1
+          },
+          "course_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 1
+          },
+          "degree_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 1
+          }
+        },
+        "xml" : {
+          "name" : "Approved_degrees"
+        }
+      },
+      "User" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 10
+          },
+          "username" : {
+            "type" : "string",
+            "example" : "theUser"
+          },
+          "name" : {
+            "type" : "string",
+            "example" : "Big John"
+          },
+          "password" : {
+            "type" : "string",
+            "example" : "12345"
+          },
+          "degree_id" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 1
+          }
+        },
+        "example" : {
+          "password" : "12345",
+          "degree_id" : 1,
+          "name" : "Big John",
+          "id" : 10,
+          "username" : "theUser"
+        },
+        "xml" : {
+          "name" : "User"
+        }
+      },
+      "Degrees" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        },
+        "xml" : {
+          "name" : "Degrees"
+        }
+      },
+      "ApiResponse" : {
+        "type" : "object",
+        "properties" : {
+          "code" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "type" : {
+            "type" : "string"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        },
+        "xml" : {
+          "name" : "##default"
+        }
+      }
+    },
+    "requestBodies" : {
+      "Pet" : {
+        "description" : "Pet object that needs to be added to the store",
+        "content" : {
+          "application/json" : {
+            "schema" : {
+              "$ref" : "#/components/schemas/Courses"
+            }
+          },
+          "application/xml" : {
+            "schema" : {
+              "$ref" : "#/components/schemas/Courses"
+            }
+          }
+        }
+      },
+      "UserArray" : {
+        "description" : "List of user object",
+        "content" : {
+          "application/json" : {
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/User"
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "moodle_auth" : {
+        "type" : "oauth2",
+        "flows" : {
+          "implicit" : {
+            "authorizationUrl" : "https://moodle_18.swagger.io/oauth/authorize",
+            "scopes" : {
+              "write:course" : "modify your courses",
+              "read:course" : "read your courses"
+            }
+          }
+        }
+      },
+      "api_key" : {
+        "type" : "apiKey",
+        "name" : "api_key",
+        "in" : "header"
+      }
+    }
+  }
+}
