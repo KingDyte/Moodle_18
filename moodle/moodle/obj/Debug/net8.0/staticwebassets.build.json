@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KCydPs9NACiD3Fuw7C4cJzh8ugl6p0VZOxdJpFRh1ZY=",
+  "Source": "moodle",
+  "BasePath": "_content/moodle",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

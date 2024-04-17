@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace moodle.Controllers
 {
@@ -8,22 +9,25 @@ namespace moodle.Controllers
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        private readonly ILogger<TestController> _logger;
-
-        public TestController(ILogger<TestController> logger)
+        public TestController(IWebHostEnvironment hostingEnvironment)
         {
-            _logger = logger;
+            _webHostEnvironment = hostingEnvironment;
         }
 
         [HttpGet]
-        public IActionResult tryNumeroUno() 
+
+        public async Task<IActionResult> GetJsonFile()
         {
             var filePath = Path.Combine(_webHostEnvironment.ContentRootPath, "test.json");
 
-            if (!System.IO.File.Exists(filePath)) return NotFound();
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
 
-            var json = System.IO.File.ReadAllText(filePath, "application/json");
-            return Content(json);
+            var json = System.IO.File.ReadAllText(filePath);
+
+            return Content(json, "application/json");
         }
     }
 }

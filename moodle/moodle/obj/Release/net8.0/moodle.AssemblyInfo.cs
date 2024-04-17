@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("moodle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18e996207c1e4b700537fba5f25b54b21c265627")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc33d1463a0ddc66b551d69cbde52b7e21978e97")]
 [assembly: System.Reflection.AssemblyProductAttribute("moodle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("moodle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
