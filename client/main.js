@@ -3,27 +3,33 @@ function goToLoginPage() {
 		
 }
 
-async function showCourses() {
-    var textArea = document.getElementById("courses");
 
-    try{        
+function createList(data) {
+    var list = "<ul>";
+    data.forEach(item => {
+        list += `<li>${item.name}</li>`;
+    });
+    list += "</ul>";
+    return list;
+}
+
+async function showCourses() {
+    var div = document.getElementById("courses");
+
+    try {
         const data = await getData("course");
         console.log(data);
-        textArea.textContent = JSON.stringify(data, null, 2);
-    }
-    catch(error){
+        div.innerHTML = createList(data);
+    } catch (error) {
         console.log("Adatbekérési hiba: " + error);
+        div.textContent = "Hiba történt az adatok lekérdezése során.";
     }
 }
 
-
-
-
-
-
-
-
-
+async function sortByDepartment(tanszek)
+{
+	
+}
 
 
 
