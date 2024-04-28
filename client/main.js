@@ -28,7 +28,17 @@ async function showCourses() {
 
 async function sortByDepartment(tanszek)
 {
-	
+	var div = document.getElementById("courses");
+    console.log("course/dep/"+tanszek);
+
+    try {
+        const data = await getData("course/dep/"+tanszek);
+        console.log(data);
+        div.innerHTML = createList(data);
+    } catch (error) {
+        console.log("Adatbekérési hiba: " + error);
+        div.textContent = "Hiba történt az adatok lekérdezése során.";
+    }
 }
 
 
