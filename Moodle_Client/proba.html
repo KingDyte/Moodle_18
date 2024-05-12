@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Moodle teszt</title>
+    <script src="proba.js"></script>
+    <script src="api.js"></script>
+</head>
+<body>
+    <input type="button" value="Teszt" onclick="test()"><br>
+    <input type="button" value="Kurzusok listázása" onclick="allcourses()"><br>
+    <input type="button" value="Kurzusok tanszék szerinti szűrése" onclick="dept()"> <input type="text" id="dept" placeholder="dept ide"><br>
+    <input type="button" value="Kurzusaim listázása" onclick="mycourses()"> <input type="text" id="neptun" placeholder="neputn ide"><br>
+    <input type="button" value="Kurzusra feliratkozás" onclick="enroll()"><input type="text" id="targykod" placeholder="kurzuskód ide"><br>
+    <input type="button" value="Kövi esemény" onclick="nextevent()"><br>
+
+    <section id="kimenet"></section>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4V/iMcYE6tJ4NaajEmfpjeQ+ozSuQZL2L/qrrh6IB68=",
+  "Source": "Moodle_server2.0",
+  "BasePath": "_content/Moodle_server2.0",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\models\\moodledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\moodledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\models\\coursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\coursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\source\\repos\\moodle_server2.0\\moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\appsettings.json",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\appsettings.json",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\appsettings.json",
+              "RelativeToolTip": "Moodle_server2.0\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-12T14:43:37.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Approved_degreesModel.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\Approved_degreesModel.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\Approved_degreesModel.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\Approved_degreesModel.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Models\\Approved_degreesModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:31:47.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "moodleData.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\moodleData.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\moodleData.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\moodleData.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Models\\moodleData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:18:46.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CourseModel.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\CourseModel.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\CourseModel.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Models\\CourseModel.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Models\\CourseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:17:26.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAABQwDEAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:10:37.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:04:46.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\psely\\source\\repos\\Moodle_server2.0\\Moodle_server2.0\\Program.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Program.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:02:26.399Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
