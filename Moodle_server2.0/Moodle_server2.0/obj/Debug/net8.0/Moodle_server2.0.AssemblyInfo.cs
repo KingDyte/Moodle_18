@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moodle_server2.0")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbe7a2a32d5d3bf3b99a51e564b1a1d5da18953c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moodle_server2.0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moodle_server2.0")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

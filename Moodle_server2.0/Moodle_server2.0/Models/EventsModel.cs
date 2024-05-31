@@ -7,12 +7,13 @@ namespace Moodle_server2._0
 {
     public class EventsModel
     {
-        public long Id { get; set; }
-        public long course_id { get; set; }
+        public int Id { get; set; }
+        public int course_id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
 
-        public EventsModel(long a, long b, string c, string d)
+        public EventsModel() { }
+        public EventsModel(int a, int b, string c, string d)
         {
             this.Id = a;
             this.course_id = b;

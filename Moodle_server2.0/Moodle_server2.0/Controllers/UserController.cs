@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Linq;
 using System.Threading.Tasks;
+using Moodle_server2._0.Models;
 
 namespace Moodle_server2._0.Controllers
 {
@@ -18,6 +19,13 @@ namespace Moodle_server2._0.Controllers
             new UserModel(2, "teszt@ors2.hu", "Ors2", "jelszo2", 1),
             new UserModel(3, "teszt@ors3.hu", "Ors3", "jelszo3", 2)
         };
+
+        private readonly moodleDataContext data;
+
+        public UserController(moodleDataContext d)
+        {
+            data = d;
+        }
 
         [HttpGet("{id}")]
         public string GetByID(int id)

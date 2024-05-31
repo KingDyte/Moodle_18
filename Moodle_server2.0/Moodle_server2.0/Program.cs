@@ -3,7 +3,7 @@ using Microsoft.Identity.Client;
 using Moodle_server2._0.Models;
 
 namespace Moodle_server2._0
-{ 
+{
     public class Program
     { 
         //public void configureServices(IServiceCollection services)
@@ -16,10 +16,17 @@ namespace Moodle_server2._0
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<moodleData>(options =>
-            {
-                options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
+
+
+
+            //builder.Services.AddSqlite<moodleDataContext>(builder.Configuration.GetConnectionString("DefaultConnnection"));
+
+            builder.Services.AddDbContext<moodleDataContext>();
+
+            //builder.Services.AddDbContext<moodleData>(options =>
+            //{
+            //    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+            //});
 
 
             builder.Services.AddControllers();
