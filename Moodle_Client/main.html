@@ -16,11 +16,10 @@
         </ul>
     </nav>
     <label>szűrés tanszék alapján</label>
-    <input type="button" value="VEMIMAB144IN" onclick="sortByDepartment(this.value)">
-    <input type="button" value="VEMIMAB344LI" onclick="sortByDepartment(this.value)">
-    <input type="button" value="VEPETO1122A" onclick="sortByDepartment(this.value)">
-    <input type="button" value="VEMIVIB213SF" onclick="sortByDepartment(this.value)">
-
+    <input type="button" value="Matemaikai tanszék" onclick="sortByDepartment('MAT')">
+    <input type="button" value="Testnevelési tanszék" onclick="sortByDepartment('TES')">
+    <input type="button" value="Informatikai Tanszék" onclick="sortByDepartment('INF')">
+    
 
 
 
@@ -44,8 +43,9 @@
         <button>List own courses</button><br>
         <button>View upcoming events</button><br>
     </div>
+    <h2>Courses</h2>
     <div id="courses">
-        <h2>Courses</h2>
+        
         <!-- List of courses will be here -->
     </div>
 </body>

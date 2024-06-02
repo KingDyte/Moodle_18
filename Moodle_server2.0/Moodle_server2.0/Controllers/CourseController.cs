@@ -82,11 +82,6 @@ namespace Moodle_server2._0.Controllers
         [HttpGet]
         public async Task<ActionResult> GetCourses()
         {
-            //var res=from courses in data.courses select courses;
-            //await foreach (var e in res.AsAsyncEnumerable())
-            //{
-            //    await Console.Out.WriteLineAsync($"name: {e.name}");
-            //}
 
             var coursesList=data.courses.ToList();
             var coursesJson= JsonConvert.SerializeObject(coursesList);
@@ -95,43 +90,20 @@ namespace Moodle_server2._0.Controllers
             return Content(coursesJson);
         }
 
-        //[HttpGet]
-        //public string Get()
-        //{
-        //    // Console.WriteLine(data.courses.Count());
-        //    return JsonSerializer.Serialize(kurzusok);
-        //}
 
+        [HttpGet("{courseId}")]
+        public string Get(int courseId)
+        {
+            var course = data.courses.Where(x => x.Id == courseId);
+            return JsonConvert.SerializeObject(course);
+        }
 
-        //[HttpGet("{courseId}")]
-        //public string Get(int courseId)
-        //{
-        //    int x = kurzusok.FindIndex(x => x.Id == courseId);
-        //    if (x != -1)
-        //    {
-        //        return JsonSerializer.Serialize<CourseModel>(kurzusok[x]);
-        //    }
-        //    else
-        //    {
-        //        this.HttpContext.Response.StatusCode = 400;
-        //        return "{'msg':'Hiba'}";
-        //    }
-        //}
-
-        //[HttpGet("dep/{depName}")]
-        //public string Get(string depName)
-        //{
-        //    List<CourseModel> dep = kurzusok.Where(x => x.code == "xyz" + depName).ToList();
-        //    if (dep.Count() != 0)
-        //    {
-        //        return JsonSerializer.Serialize(dep);
-        //    }
-        //    else
-        //    {
-        //        this.HttpContext.Response.StatusCode = 400;
-        //        return "{'msg':'Hiba'}";
-        //    }
-        //}
+        [HttpGet("dep/{depName}")]
+        public string Get(string depName)
+        {
+            var courses = data.courses.Where(x => x.department == depName);
+            return JsonConvert.SerializeObject(courses);
+        }
 
         //[HttpGet("{courseId}/events")]
         //public string GetEventsForId(int courseId)
