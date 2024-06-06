@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Moodle_server2._0.Controllers
+namespace Moodle_server2._0.Auth
 {
     public class PasswordHandler
     {

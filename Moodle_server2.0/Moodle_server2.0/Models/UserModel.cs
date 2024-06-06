@@ -7,20 +7,22 @@ namespace Moodle_server2._0
 {
     public class UserModel
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public string Name { get; set; }
-        public string Password { get; set; }
-        public int DegreeID { get; set; }
+        public int id { get; set; }
+        public string username { get; set; }
+        public string name { get; set; }
+        public int degree_id { get; set; }
+        public byte[] passwordHash { get; set; }
+        public byte[] passwordSalt { get; set; }
 
         public UserModel() { }
-        public UserModel(int a, string b, string c, string d, int e)
+        public UserModel(int a, string b, string c, int e, byte[] ph, byte[]ps)
         {
-            this.Id = a;
-            this.Username = b;
-            this.Name = c;
-            this.Password = d;
-            this.DegreeID = e;
+            this.id = a;
+            this.username = b;
+            this.name = c;
+            this.degree_id = e;
+            this.passwordHash = ph;
+            this.passwordSalt = ps;
         }
     }
 }

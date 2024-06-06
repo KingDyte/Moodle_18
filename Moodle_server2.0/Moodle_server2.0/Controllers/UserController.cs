@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Linq;
 using System.Threading.Tasks;
 using Moodle_server2._0.Models;
+using Moodle_server2._0.Auth;
 
 namespace Moodle_server2._0.Controllers
 {
@@ -13,51 +14,26 @@ namespace Moodle_server2._0.Controllers
     public class UserController : Controller
     {
         // Statikus felhasznalok
-        List<UserModel> felhasznalok = new List<UserModel>()
-        {
-            new UserModel(1, "teszt@ors1.hu", "Ors1", "jelszo1", 0),
-            new UserModel(2, "teszt@ors2.hu", "Ors2", "jelszo2", 1),
-            new UserModel(3, "teszt@ors3.hu", "Ors3", "jelszo3", 2)
-        };
+        //List<UserModel> felhasznalok = new List<UserModel>()
+        //{
+        //    new UserModel(1, "teszt@ors1.hu", "Ors1", "jelszo1", 0),
+        //    new UserModel(2, "teszt@ors2.hu", "Ors2", "jelszo2", 1),
+        //    new UserModel(3, "teszt@ors3.hu", "Ors3", "jelszo3", 2)
+        //};
 
         private readonly moodleDataContext data;
-
-        public UserController(moodleDataContext d)
+        private readonly AuthController AuthC;
+        public UserController(moodleDataContext d, AuthController authC)
         {
             data = d;
+            AuthC = authC;
         }
 
-        [HttpGet("{id}")]
-        public string GetByID(int id)
+        [HttpPost("AddUser")]
+        public async Task<IActionResult> AddUser(AddUser user)
         {
-            int x = felhasznalok.FindIndex(x => x.Id == id);
-
-            if (x != -1)
-            {
-                return JsonSerializer.Serialize<UserModel>(felhasznalok[x]);
-            }
-            else
-            {
-                this.HttpContext.Response.StatusCode = 400;
-                return "Hiba";
-            }
-        }
-
-        [HttpPost("login/{uName}/{pw}")]
-        public string Login(string uName, string pw)
-        {
-            int x = felhasznalok.FindIndex(x => x.Username == uName);
-
-            if (x != -1)
-            {
-                return JsonSerializer.Serialize<UserModel>(felhasznalok[x]);
-                Console.WriteLine(felhasznalok[x].Name);
-            }
-            else
-            {
-                this.HttpContext.Response.StatusCode = 400;
-                return "Nincs ilyen felhasznalo ezzel az emaillel!";
-            }
+            await AuthC.AddUser(user);
+            return Ok();
         }
         //public IActionResult Index()
         //{

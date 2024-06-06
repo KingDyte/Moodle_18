@@ -1,7 +1,7 @@
 ﻿using Moodle_server2._0.Models;
 using System.Runtime.CompilerServices;
 
-namespace Moodle_server2._0.Controllers
+namespace Moodle_server2._0.Auth
 {
     public class AccesControlList
     {
@@ -44,21 +44,21 @@ namespace Moodle_server2._0.Controllers
         {
             if (!initialized)
             {
-                int teacherId = data.degrees.SingleOrDefault(x => x.name == "Oktató").Id;
+                int teacherId = data.degrees.SingleOrDefault(x => x.name == "Oktató").id;
                 //RoleEnum role;
                 foreach (var u in data.users)
                 {
-                    if (u.DegreeID == teacherId)
+                    if (u.degree_id == teacherId)
                     {
-                        AccesControlList.AddUser(u.Username);
-                        AccesControlList.AddPermission(u.Username, Roles.Teacher);
+                        AccesControlList.AddUser(u.username);
+                        AccesControlList.AddPermission(u.username, Roles.Teacher);
                     }
                     else
                     {
-                        AccesControlList.AddUser(u.Username);
-                        AccesControlList.AddPermission(u.Username, Roles.Student);
+                        AccesControlList.AddUser(u.username);
+                        AccesControlList.AddPermission(u.username, Roles.Student);
                     }
-                    Console.WriteLine(u.Username);
+                    Console.WriteLine(u.username);
                 }
                 initialized = true;
             }

@@ -8,7 +8,7 @@ namespace Moodle_server2._0
 {
     public class CourseModel
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string code { get; set; }
         public string name { get; set; }
         public int credit { get; set; }
@@ -17,7 +17,7 @@ namespace Moodle_server2._0
         public CourseModel() { }
         public CourseModel(int a, string b, string c, int d, string department)
         {
-            this.Id = a;
+            this.id = a;
             this.code = b;
             this.name = c;
             this.credit = d;

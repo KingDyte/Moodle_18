@@ -94,7 +94,7 @@ namespace Moodle_server2._0.Controllers
         [HttpGet("{courseId}")]
         public string Get(int courseId)
         {
-            var course = data.courses.Where(x => x.Id == courseId);
+            var course = data.courses.Where(x => x.id == courseId);
             return JsonConvert.SerializeObject(course);
         }
 

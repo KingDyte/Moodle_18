@@ -7,13 +7,13 @@ namespace Moodle_server2._0
 {
     public class DegreesModel
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string name { get; set; }
 
         public DegreesModel() { }  
         public DegreesModel(int a, string b)
         {
-            this.Id = a;
+            this.id = a;
             this.name = b;
         }
     }

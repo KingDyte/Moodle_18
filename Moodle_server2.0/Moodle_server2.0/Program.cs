@@ -6,11 +6,7 @@ namespace Moodle_server2._0
 {
     public class Program
     { 
-        //public void configureServices(IServiceCollection services)
-        //{
-        //    services.AddDbContext
-        //   // services.AddControllersWithView();
-        //}
+        
         public static void Main(string[] args) 
         {
             var builder = WebApplication.CreateBuilder(args);
