@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\auth\\accescontrollist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\auth\\accescontrollist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\mycoursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\mycoursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\commodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\commodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\auth\\accescontrollist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\auth\\accescontrollist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\approved_degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\coursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\coursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\models\\degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\degreesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +58,37 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "MycourseModel.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\MycourseModel.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\MycourseModel.cs",
+              "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\MycourseModel.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Models\\MycourseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:01:36.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\Roles.cs",
+              "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\Roles.cs",
+              "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\Roles.cs",
+              "RelativeToolTip": "Moodle_server2.0\\Models\\Roles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T14:54:48.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Program.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Program.cs",
@@ -66,31 +100,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
               "RelativeToolTip": "Moodle_server2.0\\Controllers\\CourseController.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAA1wHEAAAALAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:29:00.04Z"
+              "WhenOpened": "2024-06-03T12:29:00.04Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\UserController.cs",
               "RelativeToolTip": "Moodle_server2.0\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwDMAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:28:30.626Z"
+              "WhenOpened": "2024-06-03T12:28:30.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Approved_degreesModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\Approved_degreesModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\Approved_degreesModel.cs",
@@ -98,24 +134,25 @@
               "RelativeToolTip": "Moodle_server2.0\\Models\\Approved_degreesModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:26:40.503Z"
+              "WhenOpened": "2024-06-03T12:26:40.503Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ComModels.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\ComModels.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\ComModels.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\ComModels.cs",
               "RelativeToolTip": "Moodle_server2.0\\Models\\ComModels.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAmwCQAAAAFAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA4wCQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T12:26:38.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "CourseModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\CourseModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\CourseModel.cs",
@@ -127,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "DegreesModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\DegreesModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\DegreesModel.cs",
@@ -135,11 +172,12 @@
               "RelativeToolTip": "Moodle_server2.0\\Models\\DegreesModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:26:12.041Z"
+              "WhenOpened": "2024-06-03T12:26:12.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\UserModel.cs",
@@ -151,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "AccesControlList.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\AccesControlList.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Auth\\AccesControlList.cs",
@@ -159,18 +197,17 @@
               "RelativeToolTip": "Moodle_server2.0\\Auth\\AccesControlList.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:23:11.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:23:11.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\AuthController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Auth\\AuthController.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\AuthController.cs",
               "RelativeToolTip": "Moodle_server2.0\\Auth\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwEoAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T16:07:23.151Z",
               "EditorCaption": ""

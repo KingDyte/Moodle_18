@@ -6,6 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Moodle_server2._0.Models;
 using Moodle_server2._0.Auth;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace Moodle_server2._0.Controllers
 {
@@ -13,28 +16,62 @@ namespace Moodle_server2._0.Controllers
     [ApiController]
     public class UserController : Controller
     {
-        // Statikus felhasznalok
-        //List<UserModel> felhasznalok = new List<UserModel>()
-        //{
-        //    new UserModel(1, "teszt@ors1.hu", "Ors1", "jelszo1", 0),
-        //    new UserModel(2, "teszt@ors2.hu", "Ors2", "jelszo2", 1),
-        //    new UserModel(3, "teszt@ors3.hu", "Ors3", "jelszo3", 2)
-        //};
 
         private readonly moodleDataContext data;
-        private readonly AuthController AuthC;
-        public UserController(moodleDataContext d, AuthController authC)
+        //private readonly AuthController AuthC;
+        public UserController(moodleDataContext d/*, AuthController authC*/)
         {
             data = d;
-            AuthC = authC;
+            //AuthC = authC;
+        }
+        [HttpGet("users/{CourseCode}")]
+        public async Task<IActionResult> UserOnCourse(string CourseCode)
+        {
+            int courseId=data.courses.ToList().Where(x=>x.code==CourseCode).First().id;
+            
+            var allUser=data.users.ToList();
+            var pList= new List<UserBack>();
+            foreach(var e in data.mycourses)
+            {
+                var s=allUser.Find(x=>x.id==e.id);
+                if (s == null) continue;
+
+                UserBack back=new UserBack();
+                back.Username = s!.username;
+                back.Name = s!.name;
+                back.Degree = data.degrees.FirstOrDefault(x => x.id == s.degree_id)!.name;
+               
+                pList.Add(back);
+            }
+
+            var pJson=JsonConvert.SerializeObject(pList);
+            return Content(pJson);
         }
 
-        [HttpPost("AddUser")]
-        public async Task<IActionResult> AddUser(AddUser user)
+        [HttpPut("enroll/{courseCode}")]
+        //[Authorize(Roles="student")]
+        public async Task<IActionResult> EnrollStudent(string courseCode, [FromBody] string username)
         {
-            await AuthC.AddUser(user);
-            return Ok();
+            int courseId=data.courses.ToList().Where(x=>x.code==courseCode).First().id;
+            int userId=data.users.ToList().Where(x=>x.username==username).First().id;
+            await Console.Out.WriteLineAsync( $"------- userId: {userId},   courseId: {courseId}-----");
+            
+            var sds=data.mycourses.FirstOrDefault(x=>x.id==userId && x.course_id==courseId);
+            if (sds==null)
+            {
+                data.mycourses.Add(new MycourseModel(data.mycourses.Count()+1,userId,courseId));
+
+                await Console.Out.WriteLineAsync($"-------id: {data.mycourses.Count()} userId: {userId},   courseId: {courseId}-----");
+                await data.SaveChangesAsync();
+                return Ok();
+            }
+
+
+            return BadRequest();
         }
+
+
+
         //public IActionResult Index()
         //{
         //    return View();
