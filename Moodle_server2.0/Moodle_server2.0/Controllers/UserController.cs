@@ -9,11 +9,13 @@ using Moodle_server2._0.Auth;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Moodle_server2._0.Controllers
 {
     [Route("api/user")]
     [ApiController]
+    [Authorize]
     public class UserController : Controller
     {
 
@@ -49,15 +51,25 @@ namespace Moodle_server2._0.Controllers
         }
 
         [HttpPut("enroll/{courseCode}")]
-        //[Authorize(Roles="student")]
+        [Authorize(Roles=Roles.Student)]
         public async Task<IActionResult> EnrollStudent(string courseCode, [FromBody] string username)
         {
-            int courseId=data.courses.ToList().Where(x=>x.code==courseCode).First().id;
-            int userId=data.users.ToList().Where(x=>x.username==username).First().id;
-            await Console.Out.WriteLineAsync( $"------- userId: {userId},   courseId: {courseId}-----");
+            int courseId = data.courses.FirstOrDefault(x => x.code == courseCode).id;
+            int userId = data.users.FirstOrDefault(x => x.username == username).id; 
             
-            var sds=data.mycourses.FirstOrDefault(x=>x.id==userId && x.course_id==courseId);
-            if (sds==null)
+            //try 
+            //{
+            //    courseId = data.courses.FirstOrDefault(x => x.code == courseCode).id;
+            //    userId = data.users.FirstOrDefault(x => x.username == username).id;
+            //}
+            //catch (Exception e)
+            //{
+            //    return BadRequest("tárgy vagy személy nem létezik");
+            //}
+
+            int CheckIfExist=data.mycourses.Count(x=>x.user_id==userId && x.course_id==courseId);
+
+            if (CheckIfExist==0)
             {
                 data.mycourses.Add(new MycourseModel(data.mycourses.Count()+1,userId,courseId));
 
