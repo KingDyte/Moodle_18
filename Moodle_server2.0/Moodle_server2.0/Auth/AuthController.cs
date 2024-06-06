@@ -18,58 +18,36 @@ namespace Moodle_server2._0.Auth
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
-        //private readonly IAuthService autS;
         private readonly moodleDataContext data;
 
         public AuthController( moodleDataContext data)
         {
-            //this.autS = AS;
             this.data = data;
         }
 
-        //[HttpPost("AddUser")]
-        //public async Task<IActionResult> AddUser(AddUser newUser)
-        //{
-        //    await autS.AddUser(newUser);
-        //    return Ok();
-        //}
+        [HttpPost("login")]
+        public async Task<UserBack> Login(LoginModel login)
+        {
+            var user=await data.users!.FirstOrDefaultAsync(x=>x.username==login.UserName)??throw new Exception("Rossz felhasználónév vagy jelszó");
 
-        //[HttpPost("login")]
-        //public async Task<IActionResult> Login(LoginModel login)
-        //{
-        //    if (login == null) return BadRequest("Nincs adat");
+            if (VerifyPassword(login.Password, user.passwordHash!, user.passwordSalt!))
+                return new UserBack
+                {
+                    Username = user.username,
+                    Name = user.name,
+                    Degree = data.degrees.FirstOrDefault(x => x.id == user.degree_id).name!
+                };
+            else throw new Exception("Rossz felhasználónév vagy jelszó");
+        }
 
-        //    var user = data.users.SingleOrDefault(x => x.username == login.UserName);
-        //    if (user == null) return Unauthorized("Nincs ilyen felhasználó");
-        //    await Console.Out.WriteLineAsync($"uname:{user.username}, pw: {user.password}, login pw: {login.Password}");
-        //    if (PasswordHandler.VerifyPassword(user.username, user.password, login.Password))
-        //    {
-        //        bool oktato = user.degree_id == data.degrees.SingleOrDefault(x => x.name == "Oktató").id;
-
-        //        var claims = new[]
-        //        {
-        //            new Claim(ClaimTypes.NameIdentifier,user.id.ToString()),
-        //            new Claim(ClaimTypes.Role,user.degree_id.ToString()),
-        //            new Claim(ClaimTypes.GivenName,user.username),
-        //            new Claim(ClaimTypes.Name,user.name),
-        //        };
-
-        //        var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(conf["Jwt:SecretKey"]));
-        //        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-        //        var token = new JwtSecurityToken(
-        //            issuer: conf["Jwt:Issuer"],
-        //            audience: conf["Jwt:Audience"],
-        //            claims: claims,
-        //            expires: DateTime.UtcNow.AddSeconds(180),
-        //            signingCredentials: creds
-        //            );
-        //        var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
-        //        return Ok(new { message = "Sikeres Bejelentkezés", UName = user.username, userId = user.id, isOktato = oktato, token = jwtToken });
-        //    }
-
-        //    return Unauthorized("Helytelen Bejelentkezési adatok");
-        //}
-        //nem jó
+        private bool VerifyPassword(string password, byte[] pwHash, byte[] pwSalt)
+        {
+            using(var hmac=new HMACSHA512(pwSalt)) 
+            {
+                var convHash=hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                return convHash.SequenceEqual(pwHash);
+            }
+        }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
@@ -95,16 +73,12 @@ namespace Moodle_server2._0.Auth
 
             user.passwordHash = pwHash;
             user.passwordSalt = pwSalt;
+            int uId = data.users.Count() + 1;
+            await Console.Out.WriteLineAsync($"-----id:{uId}");
+            await Console.Out.WriteLineAsync($"--------username: {user.username}, id: {user.id}, name: {user.name}");
 
-            var uid = data.users.FirstOrDefault().id;
-            if (uid == null)
-            {
-                await Console.Out.WriteLineAsync("---------nulla-------");
-                user.id = 1;
-            }
-            else user.id = uid + 1;
-
-            await Console.Out.WriteLineAsync($"--------username: {user.username}, id: {user.id}, name: {user.ToString}");
+            await data.users!.AddAsync(user);
+            await data.SaveChangesAsync();
         }
 
     }
