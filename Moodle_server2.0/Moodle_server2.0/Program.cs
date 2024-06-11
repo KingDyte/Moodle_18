@@ -7,9 +7,9 @@ using Microsoft.IdentityModel.Tokens;
 namespace Moodle_server2._0
 {
     public class Program
-    { 
-        
-        public static void Main(string[] args) 
+    {
+
+        public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -41,7 +41,7 @@ namespace Moodle_server2._0
                        ValidateAudience = true,
                        ValidateLifetime = true
                    };
-               }); 
+               });
 
             var app = builder.Build();
 
@@ -58,6 +58,10 @@ namespace Moodle_server2._0
 
             app.UseAuthentication();
             app.UseAuthorization();
+            //app.UseAuthorization(options =>
+            //{
+            //    options.AddPolicy("asd",policy=>policy.RequireRole);
+            //});
 
             app.MapControllers();
 

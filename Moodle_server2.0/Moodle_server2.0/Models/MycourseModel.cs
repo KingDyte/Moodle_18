@@ -8,15 +8,15 @@ namespace Moodle_server2._0
     public class MycourseModel
     {
         public int id { get; set; }
-        public int user_id { get; set; }
         public int course_id { get; set; }
+        public int user_id { get; set; }
 
         public MycourseModel() { }
         public MycourseModel(int a, int b, int c)
         {
             this.id = a;
-            this.user_id = b;
-            this.course_id = c;
+            this.course_id = b;
+            this.user_id = c;
         }
     }
 }

@@ -35,4 +35,19 @@
         public string Name { get; set; }
         public string Degree { get; set; }
     }
+    public class CourseBack
+    {
+        public string Code { get; set; }
+        public String Name { get; set; }
+        public int Credit { get; set; }
+    }
+    public class EventBack
+    {
+        public string Course { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Date { get; set; }
+
+    }
+
 }
