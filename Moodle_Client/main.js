@@ -1,8 +1,26 @@
-function goToLoginPage() {
-	document.getElementById("logoutButton").addEventListener("click", function() {window.location.href = "index.html";});
-		
-}
 
+window.onload=function()
+{
+    displayUserInfo();
+}
+function displayUserInfo()
+{
+    var user=localStorage.getItem('data');
+    if(user)
+    {
+        var userData=JSON.parse(user)
+        document.getElementById("profile").innerHTML=
+        '<h2>Profile Details</h2>'+
+        `<p>Név: ${userData.name} </p>`+ 
+        `<p>Neptun kód: ${userData.username} </p>`+
+        `<p>Szak: ${userData.degree}</p>`
+    } 
+}
+ async function logout()
+ {
+    localStorage.clear();
+    window.location.replace("C:\Users\psely\Documents\GitHub\Moodle_18\Moodle_Client\index.html\index.html");
+ }
 
 function createList(data) {
     var list = "<ul>";

@@ -1,27 +1,20 @@
+window.onload=function()
+{
+	localStorage.clear();
+}
 async function login()
 {
-	var Uname=document.getElementById("username").value;
-	var pw   =document.getElementById("pw").value;
-
-	if(isEmpty(Uname) || isEmpty(pw)) alert('Felhasználónév és jelszó megadása kötelező');
+	
+	var uName=document.getElementById('username').value;
+	var pw=document.getElementById('pw').value
+	if(isEmpty(uName) || isEmpty(pw)) alert('Felhasználónév és jelszó megadása kötelező');
 	else
 	{
 		var data=
 		{
-			username: Uname,
+			username: uName,
 			password: pw
 		};
-
-		/*await postData("Auth/login",data,false).then(async(data)=>
-		{
-			if(await data.token)
-			{
-				localStorage.setItem("data",JSON.stringify(data));
-				console.log(data);
-				window.location.href="main.html";
-			}
-			else console.log(data.token);
-		});*/
 		try {
             const response = await postData("Auth/login", data, false);
             if (response.username!="fail") {
