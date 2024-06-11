@@ -28,16 +28,28 @@ namespace Moodle_server2._0.Auth
         [HttpPost("login")]
         public async Task<UserBack> Login(LoginModel login)
         {
-            var user=await data.users!.FirstOrDefaultAsync(x=>x.username==login.UserName)??throw new Exception("Rossz felhasználónév vagy jelszó");
+            try
+            {
+                var user = await data.users!.FirstOrDefaultAsync(x => x.username == login.UserName) ?? throw new Exception("Rossz felhasználónév vagy jelszó");
 
-            if (VerifyPassword(login.Password, user.passwordHash!, user.passwordSalt!))
+                if (VerifyPassword(login.Password, user.passwordHash!, user.passwordSalt!))
+                    return new UserBack
+                    {
+                        Username = user.username,
+                        Name = user.name,
+                        Degree = data.degrees.FirstOrDefault(x => x.id == user.degree_id).name!
+                    };
+                else throw new Exception("Rossz felhasználónév vagy jelszó");
+            }
+            catch (Exception ex)
+            {
                 return new UserBack
                 {
-                    Username = user.username,
-                    Name = user.name,
-                    Degree = data.degrees.FirstOrDefault(x => x.id == user.degree_id).name!
+                    Username = "fail",
+                    Name = "",
+                    Degree = ""
                 };
-            else throw new Exception("Rossz felhasználónév vagy jelszó");
+            }
         }
 
         private bool VerifyPassword(string password, byte[] pwHash, byte[] pwSalt)

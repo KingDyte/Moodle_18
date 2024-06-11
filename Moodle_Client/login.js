@@ -12,7 +12,7 @@ async function login()
 			password: pw
 		};
 
-		await postData("Auth/login",data,false).then(async(data)=>
+		/*await postData("Auth/login",data,false).then(async(data)=>
 		{
 			if(await data.token)
 			{
@@ -20,8 +20,21 @@ async function login()
 				console.log(data);
 				window.location.href="main.html";
 			}
-			else alert(await data.Message);
-		});
+			else console.log(data.token);
+		});*/
+		try {
+            const response = await postData("Auth/login", data, false);
+            if (response.username!="fail") {
+                localStorage.setItem("data", JSON.stringify(response));
+                console.log(response);
+                window.location.href = "main.html";
+            } else {
+                alert(response.message || 'Login failed');
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('An error occurred during login. Please try again.');
+        }
 	}
 }
 
