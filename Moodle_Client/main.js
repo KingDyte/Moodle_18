@@ -1,31 +1,40 @@
+var user=localStorage.getItem('data');
+var userData=JSON.parse(user);
 
 window.onload=function()
 {
     displayUserInfo();
+    showCourses();
 }
 function displayUserInfo()
 {
-    var user=localStorage.getItem('data');
+    
     if(user)
     {
-        var userData=JSON.parse(user)
-        document.getElementById("profile").innerHTML=
+        document.getElementById("profileData").innerHTML=
         '<h2>Profile Details</h2>'+
         `<p>Név: ${userData.name} </p>`+ 
         `<p>Neptun kód: ${userData.username} </p>`+
-        `<p>Szak: ${userData.degree}</p>`
+        `<p>Szak: ${userData.degree}</p>`;
     } 
 }
- async function logout()
+function logout()
  {
-    localStorage.clear();
-    window.location.replace("C:\Users\psely\Documents\GitHub\Moodle_18\Moodle_Client\index.html\index.html");
+    try
+    {
+        localStorage.clear();
+        window.location.replace("login.html");
+    }
+    catch(error)
+    {
+        console.error("logout error: ",error);
+    }
  }
 
 function createList(data) {
     var list = "<ul>";
     data.forEach(item => {
-        list += `<li>${item.name}</li>`;
+        list += `<li>${item.Name}</li>`;
     });
     list += "</ul>";
     return list;
@@ -57,6 +66,22 @@ async function sortByDepartment(tanszek)
         console.log("Adatbekérési hiba: " + error);
         div.textContent = "Hiba történt az adatok lekérdezése során.";
     }
+}
+
+async function myCourses()
+{
+    var div = document.getElementById("courses");
+
+    try {
+        const data=await getData("user/"+userData.username+"/courses");
+        //var courses=JSON.parse(data)
+        console.log(data);
+        div.innerHTML = "My Courses: "+createList(data);
+    } catch (error) {
+        console.log("Adatbekérési hiba: " + error);
+        div.textContent = "Hiba történt az adatok lekérdezése során.";
+    }
+
 }
 
 

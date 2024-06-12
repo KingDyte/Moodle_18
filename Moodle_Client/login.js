@@ -20,7 +20,7 @@ async function login()
             if (response.username!="fail") {
                 localStorage.setItem("data", JSON.stringify(response));
                 console.log(response);
-                window.location.href = "main.html";
+                window.location.href = "index.html";
             } else {
                 alert(response.message || 'Login failed');
             }

@@ -29,7 +29,17 @@ namespace Moodle_server2._0.Controllers
         {
 
             var coursesList=data.courses.ToList();
-            var coursesJson= JsonConvert.SerializeObject(coursesList);
+            var courseBack=new List<CourseBack>();
+            foreach (var c in coursesList)
+            {
+                CourseBack b=new CourseBack();
+                b.Code=c.code;
+                b.Name=c.name;
+                b.Credit=c.credit;
+
+                courseBack.Add(b);
+            }
+            var coursesJson= JsonConvert.SerializeObject(courseBack);
 
 
             return Content(coursesJson);
@@ -46,7 +56,18 @@ namespace Moodle_server2._0.Controllers
         public string ListCoursesByDep(string depName)
         {
             var courses = data.courses.Where(x => x.department == depName);
-            return JsonConvert.SerializeObject(courses);
+            var courseBack = new List<CourseBack>();
+            foreach (var c in courses)
+            {
+                CourseBack b = new CourseBack();
+                b.Code = c.code;
+                b.Name = c.name;
+                b.Credit = c.credit;
+
+                courseBack.Add(b);
+            }
+
+            return JsonConvert.SerializeObject(courseBack);
         }
 
  
