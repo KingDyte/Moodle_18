@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\models\\mycoursemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|c:\\users\\psely\\documents\\github\\moodle_18\\moodle_server2.0\\moodle_server2.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9B583741-B02B-445A-94D1-F68FF8857B45}|Moodle_server2.0\\Moodle_server2.0.csproj|solutionrelative:moodle_server2.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AccesControlList.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\AccesControlList.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Auth\\AccesControlList.cs",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CanEnroll.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\CanEnroll.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Auth\\CanEnroll.cs",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MycourseModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\MycourseModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\MycourseModel.cs",
@@ -126,32 +126,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Program.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Program.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Program.cs",
               "RelativeToolTip": "Moodle_server2.0\\Program.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwDsAAAAjAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAgwFEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T13:50:14.369Z"
+              "WhenOpened": "2024-06-05T13:50:14.369Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\CourseController.cs",
               "RelativeToolTip": "Moodle_server2.0\\Controllers\\CourseController.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAmwDgAAAAJAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowBsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T12:29:00.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Controllers\\UserController.cs",
@@ -159,8 +160,7 @@
               "RelativeToolTip": "Moodle_server2.0\\Controllers\\UserController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAcwFQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:28:30.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:28:30.626Z"
             },
             {
               "$type": "Document",
@@ -176,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ComModels.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\ComModels.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\ComModels.cs",
@@ -184,12 +184,11 @@
               "RelativeToolTip": "Moodle_server2.0\\Models\\ComModels.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAA2wDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:26:38.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:26:38.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CourseModel.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Models\\CourseModel.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Models\\CourseModel.cs",
@@ -213,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\psely\\Documents\\GitHub\\Moodle_18\\Moodle_server2.0\\Moodle_server2.0\\Auth\\AuthController.cs",
               "RelativeDocumentMoniker": "Moodle_server2.0\\Auth\\AuthController.cs",
@@ -221,8 +220,7 @@
               "RelativeToolTip": "Moodle_server2.0\\Auth\\AuthController.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAcwCgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T16:07:23.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T16:07:23.151Z"
             }
           ]
         }

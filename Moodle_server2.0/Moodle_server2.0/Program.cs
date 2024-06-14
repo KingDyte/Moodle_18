@@ -3,6 +3,7 @@ using Microsoft.Identity.Client;
 using Moodle_server2._0.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Net.WebSockets;
 
 namespace Moodle_server2._0
 {
@@ -17,14 +18,9 @@ namespace Moodle_server2._0
 
 
 
-            //builder.Services.AddSqlite<moodleDataContext>(builder.Configuration.GetConnectionString("DefaultConnnection"));
-
+            
             builder.Services.AddDbContext<moodleDataContext>();
 
-            //builder.Services.AddDbContext<moodleData>(options =>
-            //{
-            //    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-            //});
 
 
             builder.Services.AddControllers();
@@ -45,6 +41,27 @@ namespace Moodle_server2._0
 
             var app = builder.Build();
 
+            var webSocketOptions = new WebSocketOptions()
+            {
+                KeepAliveInterval=TimeSpan.FromMinutes(5)
+            };
+
+            app.UseWebSockets(webSocketOptions);
+
+            //app.Map("/api/course/ws", async context =>
+            //{
+            //    if (context.WebSockets.IsWebSocketRequest)
+            //    {
+            //        WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+            //        await Echo(context, webSocket);
+            //    }
+            //    else
+            //    {
+            //        context.Response.StatusCode = 400;
+            //    }
+            //});
+
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -58,15 +75,22 @@ namespace Moodle_server2._0
 
             app.UseAuthentication();
             app.UseAuthorization();
-            //app.UseAuthorization(options =>
-            //{
-            //    options.AddPolicy("asd",policy=>policy.RequireRole);
-            //});
 
             app.MapControllers();
 
             app.Run();
         }
-        
+        //private static async Task Echo(HttpContext context, WebSocket webSocket)
+        //{
+        //    var buffer = new byte[1024 * 4];
+        //    WebSocketReceiveResult result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+        //    while (!result.CloseStatus.HasValue)
+        //    {
+        //        await webSocket.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+        //        result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+        //    }
+        //    await webSocket.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
+        //}
+
     }
 }
