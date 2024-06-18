@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <button onclick="connect()">Connect</button>
+    <button onclick="sendMessage()">Send Message</button>
+    <button onclick="closeConnection()">Close Connection</button>
+    <script>
+        let socket;
+
+        function connect() {
+            socket = new WebSocket('ws://localhost:5104/ws');
+
+            socket.onopen = function (event) {
+                console.log('Connected to WebSocket');
+            };
+
+            socket.onmessage = function (event) {
+                console.log('Message from server: ', event.data);
+            };
+
+            socket.onclose = function (event) {
+                console.log('WebSocket connection closed');
+            };
+        }
+
+        function sendMessage() {
+            if (socket) {
+                socket.send('Hello, Server!');
+            }
+        }
+
+        function closeConnection() {
+            if (socket) {
+                socket.close();
+            }
+        }
+    </script>
+</body>
+</html>

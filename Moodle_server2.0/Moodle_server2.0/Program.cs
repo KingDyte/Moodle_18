@@ -4,6 +4,7 @@ using Moodle_server2._0.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Net.WebSockets;
+using Moodle_server2._0.WebSockets;
 
 namespace Moodle_server2._0
 {
@@ -20,7 +21,8 @@ namespace Moodle_server2._0
 
             
             builder.Services.AddDbContext<moodleDataContext>();
-
+            builder.Services.AddSingleton < Moodle_server2._0.WebSockets.WebSocketManager>();
+            builder.Services.AddTransient<WebSocketService>();
 
 
             builder.Services.AddControllers();
@@ -41,6 +43,7 @@ namespace Moodle_server2._0
 
             var app = builder.Build();
 
+            
             var webSocketOptions = new WebSocketOptions()
             {
                 KeepAliveInterval=TimeSpan.FromMinutes(5)
@@ -48,18 +51,7 @@ namespace Moodle_server2._0
 
             app.UseWebSockets(webSocketOptions);
 
-            //app.Map("/api/course/ws", async context =>
-            //{
-            //    if (context.WebSockets.IsWebSocketRequest)
-            //    {
-            //        WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
-            //        await Echo(context, webSocket);
-            //    }
-            //    else
-            //    {
-            //        context.Response.StatusCode = 400;
-            //    }
-            //});
+            
 
 
             // Configure the HTTP request pipeline.
@@ -78,19 +70,19 @@ namespace Moodle_server2._0
 
             app.MapControllers();
 
+            app.Use(async (context, next) =>
+            {
+                if(context.Request.Path=="/ws")
+                {
+                    var websocketService = context.RequestServices.GetRequiredService<WebSocketService>();
+                    await websocketService.HandleWebSocketConnection(context);
+                }
+                else await next();
+               
+            });
+
             app.Run();
         }
-        //private static async Task Echo(HttpContext context, WebSocket webSocket)
-        //{
-        //    var buffer = new byte[1024 * 4];
-        //    WebSocketReceiveResult result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-        //    while (!result.CloseStatus.HasValue)
-        //    {
-        //        await webSocket.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
-        //        result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-        //    }
-        //    await webSocket.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
-        //}
 
     }
 }
