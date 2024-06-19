@@ -17,10 +17,9 @@ function displayUserInfo()
     if(user)
     {
         document.getElementById("profileData").innerHTML=
-        '<h2>Profile Details</h2>'+
-        `<p>Név: ${userData.name} </p>`+ 
-        `<p>Neptun kód: ${userData.username} </p>`+
-        `<p>Szak: ${userData.degree}</p>`;
+        `</br>${userData.name} </br>`+ 
+        `Neptun kód: ${userData.username} </br>`+
+        `Szak: ${userData.degree}</br>`;
     } 
 }
 function logout()
@@ -58,8 +57,9 @@ async function showCourses() {
     }
 }
 
-async function sortByDepartment(tanszek)
+async function sortByDepartment()
 {
+    var tanszek=document.getElementById("filter").value;
 	var div = document.getElementById("courses");
     console.log("course/dep/"+tanszek);
 
