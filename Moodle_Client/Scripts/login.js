@@ -4,7 +4,8 @@ window.onload=function()
 }
 async function login()
 {
-	
+	console.log("asd");
+	/*
 	var uName=document.getElementById('username').value;
 	var pw=document.getElementById('pw').value
 	if(isEmpty(uName) || isEmpty(pw)) alert('Felhasználónév és jelszó megadása kötelező');
@@ -28,7 +29,7 @@ async function login()
             console.error('Error during login:', error);
             alert('An error occurred during login. Please try again.');
         }
-	}
+	}*/
 }
 
 function isEmpty(str)
