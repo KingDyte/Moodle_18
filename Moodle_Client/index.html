@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="Scripts/main.js"> </script>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="Scripts/main.js"> </script>
     <script src="Scripts/api.js"></script>
     <script src="Scripts/WebSocket.js"></script>
     <title>Moodle</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showCourses()">Kurzusok</a></li>
-            <li><a href="#" onclick="myCourses()">mycourses</a></li>
-        </ul>
-    </nav>
-    <label>szűrés tanszék alapján</label>
-    <input type="button" value="Matemaikai tanszék" onclick="sortByDepartment('MAT')">
-    <input type="button" value="Testnevelési tanszék" onclick="sortByDepartment('TES')">
-    <input type="button" value="Informatikai Tanszék" onclick="sortByDepartment('INF')">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body
+	class="pt-3 text-center overflow-y-scroll"
+	style="background-image: url(./books.jpg)"
+  >
+    <h1>Moodle</h1>
 
+    <p>
+      Bejelentkezve mint <span id="loggedInUser"></span
+      ><button class="btn--logout">Kijelentkezés</button>
 
+      <span class="m-5">Szűrés Szak szerint:
+        <select id="filter">
+          <option value="0" selected></option>
+        </select>
+      </span>
+    </p>
 
-
-
-
-    <div id="profile">
-        <div id="profileData"></div>
-        <input type="button" id="logoutButton" onclick="logout()" value="Kijelentkezés"> <br>      
+    <div class="main d-flex justify-content-center">
+      <div class="w-50">
+        <button disabled id="coursesBtn">Összes kurzus</button>
+        <button id="coursesBtn">Kurzusaim</button>
+        <div class="courses position-relative bg-secondary p-3 border border-dark">
+        </div>
+      </div>
     </div>
-    
-    <div id="options">
-        <h2>Options</h2>
-        <button>Filter courses by tanszék</button><br>
-        <button>View a course's attendee list</button><br>
-        <button>Take a course</button><br>
-        <button>List own courses</button><br>
-        <button>View upcoming events</button><br>
-    </div>
-    <h2>Courses</h2>
-    <div id="courses">
-        
-        <!-- List of courses will be here -->
-    </div>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./Scripts/Controller.js"></script>
+  </body>
 </html>
