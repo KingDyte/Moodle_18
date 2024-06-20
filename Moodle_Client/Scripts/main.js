@@ -60,7 +60,7 @@ async function showCourses() {
 function showPopup(course) {
     const popup = document.getElementById('popup');
     const popupText = document.getElementById('popup-text');
-    popupText.textContent = `Details about ${course}`;
+    popupText.textContent = `Kurzus hallgatói: ${course}`;
     popup.style.display = 'block';
 }
 
