@@ -38,7 +38,7 @@ function logout()
 function createList(data) {
     var list = "<ul>";
     data.forEach(item => {
-        list += `<li>${item.Name}</li>`;
+        list += `<li style="cursor: pointer;" onclick="showPopup('${item.Name}')">${item.Name}</li>`;
     });
     list += "</ul>";
     return list;
@@ -55,6 +55,18 @@ async function showCourses() {
         console.log("Adatbekérési hiba: " + error);
         div.textContent = "Hiba történt az adatok lekérdezése során.";
     }
+}
+
+function showPopup(course) {
+    const popup = document.getElementById('popup');
+    const popupText = document.getElementById('popup-text');
+    popupText.textContent = `Details about ${course}`;
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
 }
 
 async function sortByDepartment()
