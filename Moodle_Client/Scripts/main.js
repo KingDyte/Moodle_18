@@ -35,10 +35,18 @@ function logout()
     }
  }
 
-function createList(data) {
+function createList(data) { //popup
     var list = "<ul>";
     data.forEach(item => {
-        list += `<li style="cursor: pointer;" onclick="showPopup('${item.Name}')">${item.Name}</li>`;
+        list += `<li style="cursor: pointer;" onclick="showPopup('${item.Code}')">${item.Name}</li>`;
+    });
+    list += "</ul>";
+    return list;
+}
+function createListStudents(data) {
+    var list = "<ul>";
+    data.forEach(item => {
+        list += `<li>${item.Name}</li>`;
     });
     list += "</ul>";
     return list;
@@ -60,13 +68,23 @@ async function showCourses() {
 function showPopup(course) {
     const popup = document.getElementById('popup');
     const popupText = document.getElementById('popup-text');
-    popupText.textContent = `<div id="students"></div>`;
+    popupText.innerHTML = '<div id="students">'+course+StudentsOnCourse(course)+'</div>'+"<br><button id='attendCourse' onclick='attendCourse("+course+")'>Kurzus felvétele</button>";
     popup.style.display = 'block';
+    console.log('<div id="students">'+course+StudentsOnCourse(course)+'</div>'+"<br><button id='attendCourse' onclick='attendCourse("+course+")'>Kurzus felvétele</button>");
+    
+   
 }
 
 function closePopup() {
     const popup = document.getElementById('popup');
     popup.style.display = 'none';
+}
+
+async function StudentsOnCourse(course)
+{
+    const data =  await getData("user/"+course+"/enrolled");
+    console.log(data);
+    document.getElementById("students").innerHTML=createListStudents(data);
 }
 
 async function sortByDepartment()
@@ -99,6 +117,11 @@ async function myCourses()
         div.textContent = "Hiba történt az adatok lekérdezése során.";
     }
 
+}
+
+async function attendCourse(courseCode)
+{
+    const fata=await putData("user/enroll/"+courseCode);
 }
 
 
