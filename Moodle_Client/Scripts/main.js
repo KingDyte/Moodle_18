@@ -10,6 +10,7 @@ window.onload=function()
 
     displayUserInfo();
     showCourses();
+    Events();
 }
 function displayUserInfo()
 {
@@ -38,7 +39,7 @@ function logout()
 function createList(data) { //popup
     var list = "<ul>";
     data.forEach(item => {
-        list += `<li style="cursor: pointer;" onclick="showPopup('${item.Code}')">${item.Name}</li>`;
+        list += `<li style="cursor: pointer;" onclick="showPopup('`+ item.Code+`','`+ item.Name+`')">${item.Name}</li>`;
     });
     list += "</ul>";
     return list;
@@ -65,10 +66,13 @@ async function showCourses() {
     }
 }
 
-function showPopup(course) {
+function showPopup(course, name) {
+    closePopupEvent();
     const popup = document.getElementById('popup');
     const popupText = document.getElementById('popup-text');
-    popupText.innerHTML = '<div id="students"><h5 id="courseCode">'+course+'</h5></div>'+"<br><button id='attendCourse' onclick='attendCourse("+"`"+course+"`"+")'>Kurzus felvétele</button>";
+    console.log(course);
+    console.log(name);
+    popupText.innerHTML = '<div id="students"><h5 id="courseCode">'+name+'</h5><h7>'+course+'</h7><hr></div>'+"<br><button id='attendCourse' onclick='attendCourse("+"`"+course+"`"+")'>Kurzus felvétele</button>";
     popup.style.display = 'block';
     //console.log(course);
     StudentsOnCourse(course);
@@ -126,6 +130,59 @@ async function attendCourse(courseCode)
     console.log(a);
     closePopup();
     showPopup(courseCode);
+}
+
+
+//Event stuff
+var events;
+
+function eventList(data)
+{
+    var list = "<ul>";
+    data.forEach(item => {
+        const d=new Date(item.Date).toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+          })
+        list += `<li style="cursor: pointer;" onclick="showPopupEvent('${item.Date}')">${d} - ${item.Course}</li>`;
+    });
+    list += "</ul>";
+    return list;
+}
+
+async function Events()
+{
+    const data= await getData("user/"+userData.username+"/events");
+    console.log(data);
+    events=data;
+    document.getElementById("events").innerHTML=eventList(data);
+}
+
+function showPopupEvent(eventDate) {
+     closePopup();
+    const popup = document.getElementById('popup-event');
+    const popupText = document.getElementById('popup-text-event');
+    var a;
+    events.forEach(item =>{
+        if(item.Date==eventDate)
+        {
+            a=item;
+        }
+    });
+    const d=new Date(a.Date).toLocaleDateString('en-US', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      });
+
+    popupText.innerHTML = '<div id="eventsPopUp"><h5 >'+a.Course+`</h5><hr> <p>Időpont : ${d}<br>Megnevezés: ${a.Name}<br>Leírás: ${a.Description}</p></div>`;
+    popup.style.display = 'block';
+}
+
+function closePopupEvent() {
+    const popup = document.getElementById('popup-event');
+    popup.style.display = 'none';
 }
 
 

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.course {
+.course,.events {
   background-color: white;
   padding: 20px;
   margin-bottom: 20px;
@@ -24,7 +24,7 @@ button {
   margin-left: 50px;
 }
 
-.popup {
+.popup, .popup-event{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -36,7 +36,7 @@ button {
   border-radius: 10px;
 }
 
-.popup-content {
+.popup-content , .popup-content-event {
   position: relative;
 }
 

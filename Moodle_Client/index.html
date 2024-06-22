@@ -45,6 +45,7 @@
       <div>
         <button id="coursesBtn" onclick="showCourses()">Összes kurzus</button>
         <button id="MyCoursesBtn" onclick="myCourses()">Kurzusaim</button>
+        <h4>Kurzusok</h4>
         <div id="courses" class="courses position-relative p-3 border border-dark"
 		style="background-color: hsl(25, 100%, 95%)">
         </div>
@@ -61,5 +62,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <div>
+      <h4>Események</h4>
+      <div id="events" class="events position-relative p-3 border border-dark"
+      style="background-color: hsl(25, 100%, 95%)">
+      </div>
+    </div>
+    <div id="popup-event" class="popup-event" style="display:none;">
+      <div class="popup-content-event">
+        <span class="close-btn" onclick="closePopupEvent()">&times;</span>
+        <p id="popup-text-event"></p>
+      </div>
+        
   </body>
 </html>
