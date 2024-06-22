@@ -29,19 +29,20 @@ namespace Moodle_server2._0.Controllers
         [HttpGet("{CourseCode}/enrolled")]
         public async Task<IActionResult> UserOnCourse(string CourseCode)
         {
-            int courseId = data.courses.ToList().Where(x => x.code == CourseCode).First().id;
+            int courseId = data.courses.FirstOrDefault(x => x.code.Equals(CourseCode)).id;
 
-            var allUser = data.users.ToList();
+            var onC=data.mycourses.Where(x=>x.course_id==courseId).ToList();
             var pList = new List<UserBack>();
-            foreach (var e in data.mycourses)
+
+            foreach (var e in onC)
             {
-                var s = allUser.Find(x => x.id == e.id);
-                if (s == null) continue;
+                var user = data.users.FirstOrDefault(x => x.id == e.user_id);
+                if (user == null) continue;
 
                 UserBack back = new UserBack();
-                back.Username = s!.username;
-                back.Name = s!.name;
-                back.Degree = data.degrees.FirstOrDefault(x => x.id == s.degree_id)!.name;
+                back.Username = user!.username;
+                back.Name = user!.name;
+                back.Degree = data.degrees.FirstOrDefault(x => x.id == user.degree_id)!.name;
 
                 pList.Add(back);
             }
@@ -61,7 +62,9 @@ namespace Moodle_server2._0.Controllers
                 var idx = data.mycourses.Count() + 1;
                 data.mycourses.Add(new MycourseModel(idx, courseId, userId));
                 data.SaveChanges();
-                return Ok();
+
+                var jsonb = JsonConvert.SerializeObject(new MycourseModel(idx, courseId, userId));
+                return Ok(jsonb);
             }
             else
 

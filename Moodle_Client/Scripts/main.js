@@ -68,11 +68,10 @@ async function showCourses() {
 function showPopup(course) {
     const popup = document.getElementById('popup');
     const popupText = document.getElementById('popup-text');
-    popupText.innerHTML = '<div id="students">'+course+StudentsOnCourse(course)+'</div>'+"<br><button id='attendCourse' onclick='attendCourse("+course+")'>Kurzus felvétele</button>";
+    popupText.innerHTML = '<div id="students"><h5 id="courseCode">'+course+'</h5></div>'+"<br><button id='attendCourse' onclick='attendCourse("+"`"+course+"`"+")'>Kurzus felvétele</button>";
     popup.style.display = 'block';
-    console.log('<div id="students">'+course+StudentsOnCourse(course)+'</div>'+"<br><button id='attendCourse' onclick='attendCourse("+course+")'>Kurzus felvétele</button>");
-    
-   
+    //console.log(course);
+    StudentsOnCourse(course);
 }
 
 function closePopup() {
@@ -84,7 +83,7 @@ async function StudentsOnCourse(course)
 {
     const data =  await getData("user/"+course+"/enrolled");
     console.log(data);
-    document.getElementById("students").innerHTML=createListStudents(data);
+    document.getElementById("students").innerHTML+=createListStudents(data);
 }
 
 async function sortByDepartment()
@@ -121,7 +120,12 @@ async function myCourses()
 
 async function attendCourse(courseCode)
 {
-    const fata=await putData("user/enroll/"+courseCode);
+    var a=await putData("user/enroll/"+courseCode,userData.username,false);
+    alert("Sikeresen feliratkozva");
+    
+    console.log(a);
+    closePopup();
+    showPopup(courseCode);
 }
 
 
