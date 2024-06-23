@@ -37,7 +37,7 @@ function logout()
  }
 
 function createList(data) { //popup
-    var list = "<ul>";
+    var list = "<ul style="list-style-type: square;">";
     data.forEach(item => {
         list += `<li style="cursor: pointer;" onclick="showPopup('`+ item.Code+`','`+ item.Name+`')">${item.Name}</li>`;
     });
