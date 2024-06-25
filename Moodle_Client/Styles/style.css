@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+#main
+{
+  margin: 20%;
+}
+
 .course,.events {
   background-color: white;
   padding: 20px;
@@ -15,8 +20,9 @@
   background-color: #0095bb;
 }
 
-button {
+button, input,.button {
   padding: 5px;
+  border-radius: 10px
 }
 
 .event {
@@ -51,4 +57,13 @@ button {
   right: -10px;
   cursor: pointer;
   font-size: 20px;
+}
+
+#courses,#events
+{
+  border-radius: 10px;
+}
+#filter
+{
+  border-radius: 10px;
 }
