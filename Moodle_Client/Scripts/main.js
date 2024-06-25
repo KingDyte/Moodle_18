@@ -72,7 +72,8 @@ function showPopup(course, name) {
     const popupText = document.getElementById('popup-text');
     console.log(course);
     console.log(name);
-    popupText.innerHTML = '<div id="students"><h5 id="courseCode">'+name+'</h5><h7>'+course+'</h7><hr></div>'+"<br><button id='attendCourse' style='border-radius: 12px' onclick='attendCourse("+"`"+course+"`"+")'>Kurzus felvétele</button>";
+    popupText.innerHTML = '<div id="students"><h5 id="courseCode">'+name+'</h5><h7>'+course+'</h7><hr></div>'+"<br>";
+    popupText.innerHTML = "<button id='attendCourse' style='border-radius: 12px' onclick='attendCourse("+"`"+course+"`"+")'>Kurzus felvétele</button>";
     popup.style.display = 'block';
     //console.log(course);
     StudentsOnCourse(course);
